@@ -1,3 +1,4 @@
+
 export class ColorHandler {
     constructor (red,green,blue,classToColor){
         this.classToColor = classToColor;
