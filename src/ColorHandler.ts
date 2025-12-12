@@ -1,4 +1,4 @@
-import { UsefulFunction } from "../UsefulFunction/src/UsefulFunction.js"
+import { UsefulFunction } from "usefulfunction";
 export class ColorHandler {
     #red : number;
     #green : number;
@@ -78,7 +78,7 @@ export class ColorHandler {
         for (const color of colors) {
             outputColor = color.addColor(outputColor);
         }
-        outputColor.
-        return outputColor;
+        return new ColorHandler(UsefulFunction.clampNumber(outputColor.red,0,255),UsefulFunction.clampNumber(outputColor.green,0,255),UsefulFunction.clampNumber(outputColor.blue,0,255));
+        
     }
 }

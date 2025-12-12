@@ -1,0 +1,30 @@
+{
+  "name": "color-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luke-hoffmann/ColorHandler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/luke-hoffmann/ColorHandler/issues"
+  },
+  "homepage": "https://github.com/luke-hoffmann/ColorHandler#readme",
+  "dependencies": {
+    "@types/node": "^25.0.1",
+    "@types/p5": "^1.7.7",
+    "p5": "^2.1.1",
+    "usefulfunction": "github:luke-hoffmann/usefulfunction"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
