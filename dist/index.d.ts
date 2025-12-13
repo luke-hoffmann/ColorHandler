@@ -17,6 +17,7 @@ declare class ColorHandler {
     copy(): ColorHandler;
     clampColor(): ColorHandler;
     static sumAndClamp(colors: ColorHandler[]): ColorHandler;
+    elementWiseMultiplication(color: ColorHandler): ColorHandler;
 }
 
 export { ColorHandler };

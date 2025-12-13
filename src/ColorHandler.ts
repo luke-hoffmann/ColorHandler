@@ -81,4 +81,7 @@ export class ColorHandler {
         return new ColorHandler(UsefulFunction.clampNumber(outputColor.red,0,255),UsefulFunction.clampNumber(outputColor.green,0,255),UsefulFunction.clampNumber(outputColor.blue,0,255));
         
     }
+    elementWiseMultiplication(color : ColorHandler ) : ColorHandler {
+        return new ColorHandler(color.red * this.#red,color.green * this.#green, color.blue * this.#blue);
+    }
 }
