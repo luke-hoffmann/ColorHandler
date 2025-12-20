@@ -39,6 +39,13 @@ export class ColorHandler {
         return new ColorHandler(this.#red * number, this.#green * number, this.#blue * number);
 
     }
+    static randomColorsBetween(n : number, c1: ColorHandler,c2 : ColorHandler) : ColorHandler[] {
+        let colors = [];
+        for (let i =0 ; i < n; i++) {
+            colors.push(this.randomColorBetween(c1,c2));
+        }
+        return colors;
+    }
     static randomColorBetween(c1 : ColorHandler, c2 : ColorHandler) : ColorHandler{
         return new ColorHandler(UsefulFunction.randomIntBetween(c1.red,c2.red),UsefulFunction.randomIntBetween(c1.green,c2.green),UsefulFunction.randomIntBetween(c1.blue,c2.blue));
     }
