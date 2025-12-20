@@ -6,7 +6,23 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --minify --dts --format esm,cjs"
+    "build": "tsup"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "splitting": false,
+    "clean": true,
+    "minify": true,
+    "dts": true,
+    "format": [
+      "iife"
+    ],
+    "target": "es2022",
+    "globalName": "colorhandler",
+    "platform": "browser",
+    "treeshake": true
   },
   "repository": {
     "type": "git",
@@ -15,7 +31,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/luke-hoffmann/ColorHandler/issues"
   },
@@ -24,7 +40,14 @@
     "@types/p5": "^1.7.7",
     "p5": "^2.1.1",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
     "usefulfunction": "github:luke-hoffmann/usefulfunction"
   }
 }
+
+
+
+
+
