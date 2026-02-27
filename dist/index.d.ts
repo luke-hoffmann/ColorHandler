@@ -15,6 +15,7 @@ declare class ColorHandler {
     static randomColorAtWithRadius(colorCenter: ColorHandler, redRadius: number, greenRadius: number, blueRadius: number): ColorHandler;
     addNumber(number: number): ColorHandler;
     addColor(color: ColorHandler): ColorHandler;
+    addInto(color: ColorHandler): void;
     copy(): ColorHandler;
     clampColor(): ColorHandler;
     static sumAndClamp(colors: ColorHandler[]): ColorHandler;

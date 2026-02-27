@@ -65,6 +65,11 @@ export class ColorHandler {
     addColor(color : ColorHandler) : ColorHandler {
         return new ColorHandler(this.#red + color.red, this.#green + color.green, this.#blue + color.blue);
     }
+    addInto(color: ColorHandler) : void{
+        this.#red += color.red;
+        this.#green += color.green;
+        this.#blue += color.blue;
+    }
     copy(){
         return new ColorHandler(this.#red,this.#green,this.#blue);
     }
