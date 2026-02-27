@@ -1,5 +1,7 @@
 declare class ColorHandler {
     #private;
+    static readonly BLACK: Readonly<ColorHandler>;
+    static readonly WHITE: Readonly<ColorHandler>;
     constructor(red: number, green: number, blue: number);
     static random(): ColorHandler;
     get red(): number;

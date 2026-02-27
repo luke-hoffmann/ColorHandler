@@ -4,6 +4,8 @@ export class ColorHandler {
     #green : number;
     #blue : number;
     #colorArray : number[];
+    static readonly BLACK = Object.freeze(new ColorHandler(0,0,0));
+    static readonly WHITE = Object.freeze(new ColorHandler(255,255,255));
     constructor (red : number,green : number,blue : number){
         if (!Number.isFinite(red)) throw Error("red must be a finite number");
         if (!Number.isFinite(green)) throw Error("green must be a finite number");
@@ -13,6 +15,7 @@ export class ColorHandler {
         this.#blue = Math.min(Math.max(0,blue),255);
         this.#colorArray = [red,green,blue];
     }
+    
     static random() : ColorHandler{
         return new ColorHandler(UsefulFunction.randomIntBetween(0,255),UsefulFunction.randomIntBetween(0,255),UsefulFunction.randomIntBetween(0,255));
     }
