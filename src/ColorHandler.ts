@@ -52,10 +52,10 @@ export class ColorHandler {
     static randomColorBetween(c1 : ColorHandler, c2 : ColorHandler) : ColorHandler{
         return new ColorHandler(UsefulFunction.randomIntBetween(c1.red,c2.red),UsefulFunction.randomIntBetween(c1.green,c2.green),UsefulFunction.randomIntBetween(c1.blue,c2.blue));
     }
-    static randomColorAtWithGeneralRadius(colorCenter : ColorHandler, radius : number){
+    static randomColorAtWithGeneralRadius(colorCenter : ColorHandler, radius : number) : ColorHandler{
         return this.randomColorAtWithRadius(colorCenter,radius,radius,radius);
     }
-    static randomColorAtWithRadius(colorCenter : ColorHandler, redRadius : number,greenRadius : number,blueRadius : number) {
+    static randomColorAtWithRadius(colorCenter : ColorHandler, redRadius : number,greenRadius : number,blueRadius : number) : ColorHandler {
         let c1 = new ColorHandler(colorCenter.red - redRadius, colorCenter.green - greenRadius, colorCenter.blue - blueRadius);
         let c2 = new ColorHandler(colorCenter.red + redRadius, colorCenter.green + greenRadius, colorCenter.blue + blueRadius);
         return this.randomColorBetween(c1,c2);
@@ -73,7 +73,7 @@ export class ColorHandler {
         this.#green += color.green;
         this.#blue += color.blue;
     }
-    copy(){
+    copy() : ColorHandler{
         return new ColorHandler(this.#red,this.#green,this.#blue);
     }
     clampColor() : ColorHandler{
