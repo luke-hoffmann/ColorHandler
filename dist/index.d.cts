@@ -15,6 +15,7 @@ declare class ColorHandler {
     static randomColorBetween(c1: ColorHandler, c2: ColorHandler): ColorHandler;
     static randomColorAtWithGeneralRadius(colorCenter: ColorHandler, radius: number): ColorHandler;
     static randomColorAtWithRadius(colorCenter: ColorHandler, redRadius: number, greenRadius: number, blueRadius: number): ColorHandler;
+    static randomColorPercentTimeWithRadius(a: ColorHandler, b: ColorHandler, radius: number, percentTimeA: number): ColorHandler;
     addNumber(number: number): ColorHandler;
     addColor(color: ColorHandler): ColorHandler;
     addInto(color: ColorHandler): void;

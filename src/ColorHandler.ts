@@ -60,6 +60,12 @@ export class ColorHandler {
         let c2 = new ColorHandler(colorCenter.red + redRadius, colorCenter.green + greenRadius, colorCenter.blue + blueRadius);
         return this.randomColorBetween(c1,c2);
     }
+    static randomColorPercentTimeWithRadius(a: ColorHandler, b: ColorHandler, radius: number, percentTimeA : number) : ColorHandler{
+        if (percentTimeA > 1 || percentTimeA < 0) percentTimeA = 0.5;
+        let rand = Math.random();
+        if (rand < percentTimeA) return this.randomColorAtWithGeneralRadius(a,radius);
+        return this.randomColorAtWithGeneralRadius(b,radius);
+    }
     addNumber(number : number) : ColorHandler{
         if (!Number.isFinite(number)) throw Error("number is not finite");
         return new ColorHandler(this.#red + number, this.#green + number, this.#blue + number);
