@@ -42,10 +42,10 @@ export class ColorHandler {
         return new ColorHandler(this.#red * number, this.#green * number, this.#blue * number);
 
     }
-    static randomColorsBetween(n : number, c1: ColorHandler,c2 : ColorHandler) : ColorHandler[] {
+    static randomColors(f : () => ColorHandler, n : number) : ColorHandler[] {
         let colors = [];
         for (let i =0 ; i < n; i++) {
-            colors.push(this.randomColorBetween(c1,c2));
+            colors.push(f());
         }
         return colors;
     }
