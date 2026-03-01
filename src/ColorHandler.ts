@@ -49,6 +49,9 @@ export class ColorHandler {
         }
         return colors;
     }
+    static randomColorsBetween(n : number, c1: ColorHandler,c2 : ColorHandler) : ColorHandler[] {
+        return this.randomColors(()=> this.randomColorBetween(c1,c2),n);
+    }
     static randomColorBetween(c1 : ColorHandler, c2 : ColorHandler) : ColorHandler{
         return new ColorHandler(UsefulFunction.randomIntBetween(c1.red,c2.red),UsefulFunction.randomIntBetween(c1.green,c2.green),UsefulFunction.randomIntBetween(c1.blue,c2.blue));
     }

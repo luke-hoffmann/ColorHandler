@@ -11,6 +11,7 @@ declare class ColorHandler {
     setGreen(number: number): void;
     setBlue(number: number): void;
     multiplyByNumber(number: number): ColorHandler;
+    static randomColors(f: () => ColorHandler, n: number): ColorHandler[];
     static randomColorsBetween(n: number, c1: ColorHandler, c2: ColorHandler): ColorHandler[];
     static randomColorBetween(c1: ColorHandler, c2: ColorHandler): ColorHandler;
     static randomColorAtWithGeneralRadius(colorCenter: ColorHandler, radius: number): ColorHandler;
